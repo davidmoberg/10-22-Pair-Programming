@@ -8,13 +8,27 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(readr)
-library()
 library(tidyverse)
+library(gt)
 ```
 
 ```{r}
-trains <- read.csv("raw-data/train.csv")
+trains <- read_csv("raw-data/train.csv", col_types = cols(
+    obs = col_double(),
+    citizen = col_logical(),
+    age = col_double(),
+    treatment = col_double(),
+    attitude = col_double()
+))
 trains
+
 ```
+
+```{r}
+x <- tibble("obs" = c(1, 2, 3, 4), "cit1" = c(1, NA, NA, 1), "cit0" = c(NA, 0, 0, NA), "age" = c(25, 30, 40, 65), "treatment" = c(1, 0, 1, 0), "attitude" = c(15, 3, 3, 11))
+
+
+```
+
 
 
