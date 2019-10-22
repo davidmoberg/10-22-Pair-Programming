@@ -1,6 +1,6 @@
 ---
 title: "Pair Programming"
-author: "David Moberg"
+author: "Jackson Kehoe, David Moberg"
 date: "10/22/2019"
 output: html_document
 ---
